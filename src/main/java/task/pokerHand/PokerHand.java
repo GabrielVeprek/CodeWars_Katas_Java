@@ -1,4 +1,4 @@
-package task;
+package task.pokerHand;
 
 import java.util.Arrays;
 
