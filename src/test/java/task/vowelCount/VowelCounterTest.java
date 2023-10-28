@@ -1,10 +1,11 @@
 package task.vowelCount;
 
-import junit.framework.TestCase;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class VowelCounterTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class VowelCounterTest {
 
     VowelCounter vowelCounter = new VowelCounter();
 

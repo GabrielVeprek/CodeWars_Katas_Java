@@ -1,11 +1,11 @@
 package task.squareNumbers;
 
-import junit.framework.TestCase;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class SquareNumberCheckerTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
+public class SquareNumberCheckerTest {
     SquareNumberChecker squareNumberChecker = new SquareNumberChecker();
 
     @ParameterizedTest
@@ -16,7 +16,6 @@ public class SquareNumberCheckerTest extends TestCase {
             "true, 4",
             "true, 9",
             "true, 81"
-
     })
     public void testIsSquare(boolean expected, int number) {
         var result = squareNumberChecker.isSquare(number);

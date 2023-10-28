@@ -1,14 +1,14 @@
 package task.banjo;
 
-import junit.framework.TestCase;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-public class BanjoPlayerTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class BanjoPlayerTest {
     BanjoPlayer banjoPlayer = new BanjoPlayer();
 
     public static Stream<Arguments> parameters() {
@@ -25,6 +25,7 @@ public class BanjoPlayerTest extends TestCase {
     @MethodSource("parameters")
     public void testAreYouPlayingBanjo(String expected, String name) {
         var result = banjoPlayer.areYouPlayingBanjo(name);
-        Assertions.assertEquals(expected, result);
+
+        assertEquals(expected, result);
     }
 }

@@ -1,17 +1,14 @@
 package task.tenMinutesWalk;
 
-import junit.framework.TestCase;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
-import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-public class TenMinutesWalkImplTest extends TestCase {
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
+public class TenMinutesWalkImplTest {
     TenMinutesWalkImpl tenMinutesWalk = new TenMinutesWalkImpl();
 
     public static Stream<Arguments> parameter() {
@@ -30,6 +27,6 @@ public class TenMinutesWalkImplTest extends TestCase {
     public void testIsValid(boolean expected, char[] words) {
         boolean result = tenMinutesWalk.isValid(words);
 
-        Assertions.assertEquals(expected, result);
+        assertEquals(expected, result);
     }
 }
